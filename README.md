@@ -1,5 +1,5 @@
 # MSRN
-This is the pytorch implemented code for MSRN. This network is tested in UNLV-Dive Dataset.
+This is the pytorch implemented code for MSRN. This network is tested on UNLV-Dive Dataset.
 
 # Usage
 ## Requirements
