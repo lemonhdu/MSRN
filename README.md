@@ -22,7 +22,7 @@ This is the pytorch implemented code for MSRN. This network is tested in UNLV-Di
 1. Run train_minus_fc.py, try to modify directory of pretrained MS-TCN model.
 
 # Acknowledgement
-We would thank Xiang et al. for their work of annotating the action transition time points in UNLV-Dive Dataset.
+We would thank Xiang et al. for their work [S3D](https://github.com/YeTianJHU/diving-score), which annotated the action transition time points for UNLV-Dive Dataset.
 
 # Contact
 If you have any questions about our work, please contact .
