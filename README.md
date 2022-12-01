@@ -13,7 +13,7 @@ This is the pytorch implemented code for MSRN. This network is tested on UNLV-Di
 3. The output file name should be XXX.npy, such as 001.npy.
 
 ### Prepare dataself yourself
-1. You can also download the our preprocessing files from 
+1. You can also download the our preprocessing files from [google cloudDisk](https://drive.google.com/drive/folders/1z0U59MkXV-alxveIsYQk6zmRBUMQo0zv?usp=sharing).
 
 ## Train MS-TCN
 1. Run the train_mstcn.py to train the MS-TCN network, you can stop the iteration if you feel satisfied about the action segmentation results. Some file directories may need modify in params.py. We also provide a retrained MS-TCN for UNLV-Dive Dataset in ./ckpts directory, which can achieve a nearly 98% accuracy.
