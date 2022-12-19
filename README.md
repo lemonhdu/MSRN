@@ -25,6 +25,6 @@ This is the pytorch implemented code for MSRN. The network is tested on UNLV-Div
 We would like to thank Xiang et al. for their work [S3D](https://github.com/YeTianJHU/diving-score), which annotated the action transition time points for UNLV-Dive Dataset.
 
 # Contact
-We would provide the contact E-mail later since the submission of paper requires to be anonymous.
+We will provide the contact E-mail later since the submission of paper requires to be anonymous.
 
 
