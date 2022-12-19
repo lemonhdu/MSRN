@@ -19,10 +19,10 @@ This is the pytorch implemented code for MSRN. The network is tested on UNLV-Div
 1. Run the train_mstcn.py to train the MS-TCN network, you can stop the iteration if you feel satisfied about the action segmentation results. Some parameters in terms of file directories may need to be modified in params.py. We also provide a pretrained MS-TCN model for UNLV-Dive Dataset in ./ckpts directory, which can achieve a nearly 98% accuracy. 
 
 ## Train the score prediction network
-1. Run train_minus_fc.py. The program can run without any preset parameters. Some parameters about training can be modified in config.py.
+1. Run train_score.py. The program can run without any preset parameters. Some parameters about training can be modified in config.py.
 
 # Acknowledgement
-We would thank Xiang et al. for their work [S3D](https://github.com/YeTianJHU/diving-score), which annotated the action transition time points for UNLV-Dive Dataset.
+We would like to thank Xiang et al. for their work [S3D](https://github.com/YeTianJHU/diving-score), which annotated the action transition time points for UNLV-Dive Dataset.
 
 # Contact
 We would provide the contact E-mail later since the submission of paper requires to be anonymous.
