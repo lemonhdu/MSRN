@@ -134,18 +134,16 @@ def train_models(dataloaders, mstcn_model, feature_link, full_connect1, full_con
                 tcn_predict_time = mstcn_model(i3d_feature, mask)
 
                 _, predicted = torch.max(tcn_predict_time[-1].data, 1)
-                tcn_predict_time_points = get_time_points(predicted)
+                tcn_predict_time_points, predicted_points_num = get_time_points(predicted)
                 if tcn_predict_time_points is None:
                     empty_points_num = empty_points_num+1
                     continue
 
                 # get tcn feature slices
-                time_point_label_length = len(data['tcn_time'])
                 i3d_feature_jumping, i3d_feature_dropping, i3d_feature_entering, i3d_feature_ending = \
-                    get_stage_features(i3d_feature, tcn_predict_time_points, time_point_label_length)
+                    get_stage_features(i3d_feature, tcn_predict_time_points, predicted_points_num)
 
                 # compute four stage output
-
                 jumping = full_connect1(feature_link(i3d_feature_jumping))
                 dropping = full_connect1(feature_link(i3d_feature_dropping))
                 entering = full_connect1(feature_link(i3d_feature_entering))
@@ -184,7 +182,7 @@ def train_models(dataloaders, mstcn_model, feature_link, full_connect1, full_con
                                 'full_connect2_model': full_connect2.state_dict(),
                                 'feature_link': feature_link.state_dict(),
                                 'optimizer': optimizer.state_dict(),
-                                'best_coefficient': best_src}, f'ckpts/base_full_connect3.pt')
+                                'best_coefficient': best_src}, f'ckpts/base_full_connect1.pt')
 
 
 if __name__ == '__main__':
